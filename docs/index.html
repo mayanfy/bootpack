@@ -9,11 +9,21 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
+  <!-- <div id="app"></div> -->
+    <div data-app id="main">Please wait...</div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
+
+      coverpage: true,
+
+  // Custom file name
+  coverpage: '_coverpage.md',
+
+      // name: '',
+      // repo: ''
+      el: '#main',
+      loadSidebar: true,
+      subMaxLevel: 1
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
