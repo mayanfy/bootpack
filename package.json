@@ -1,0 +1,25 @@
+{
+  "name": "bootpack",
+  "version": "1.0.0",
+  "description": "desarrollar sitios html con bootstrap y webpack",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayanfy/bootpack.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "webpack",
+    "css",
+    "html"
+  ],
+  "author": "@chandzul, @sauware",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mayanfy/bootpack/issues"
+  },
+  "homepage": "https://github.com/mayanfy/bootpack#readme"
+}
