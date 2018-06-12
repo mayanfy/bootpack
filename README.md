@@ -1,8 +1,8 @@
-# bootpack
+# Bootpack
 
-Paquete inicial para desarrollo de html con bootstrap y webpack 
+Paquete inicial para desarrollo de sitios html con [Bootstrap](https://getbootstrap.com/) y [Webpack](https://webpack.js.org/)
 
-# - Clonar Repositorio
+## Clonar Repositorio
 
 ```
 λ mkdir directorio/aplicaciones/bootpack
@@ -13,16 +13,16 @@ Paquete inicial para desarrollo de html con bootstrap y webpack
 λ git pull origin master
 ```
 
-# - Instalar componentes
+## Instalar componentes
 
 ```
 λ npm install
 ```
 
-# - Correr aplicación
+## Correr aplicación
 
 * Modo desarrollo: `λ npm run dev`
-* Modo produccion: `λ npm run prod`
+* Modo producción: `λ npm run prod`
 
 ***
 
