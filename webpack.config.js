@@ -2,6 +2,7 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 const config = {
@@ -30,6 +31,26 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        // Interprets `@import` and `url()` like `import/require()` and will resolve them
+                        loader: 'css-loader', 
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        // Loads a SASS/SCSS file and compiles it to CSS
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -37,6 +58,9 @@ const config = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.pug'
+        }),
+        new MiniCssExtractPlugin({
+            filename: "css/style.css"
         })
     ]
 };
