@@ -1,4 +1,22 @@
-h1 {
-	background-color: red;
-	color: white;
-}
+//- Font a usar
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+//- Bloque de las configuraciones nuevas
+$font-family-sans-serif: 'Roboto', sans-serif !default;
+  
+//- Framework de boostrap
+@import "~bootstrap/scss/bootstrap";
+
+//- Iconos de Font awesome v4.7
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
+
+//- Iconos de Material icons
+$mdi-font-path: "~@mdi/font/fonts" !default;
+@import '~@mdi/font/scss/materialdesignicons';
+
+//- Efectos transicion
+@import '~aos/src/sass/aos';
+
+//- Menu hamburguesa
+@import '~hamburgers/_sass/hamburgers/hamburgers';

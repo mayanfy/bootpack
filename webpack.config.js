@@ -1,9 +1,7 @@
-//  webpack.config.js 
-
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const config = {
 
@@ -13,25 +11,11 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'
     },
+
+    watch: true,
+
     module: {
         rules: [
-            {
-                test: /\.pug$/,
-                use: [
-                    {
-                        loader: 'html-loader',
-                        options: {
-                            publicPath: "./images"
-                        }
-                    },
-                    {
-                        loader: 'pug-html-loader', 
-                        options: { 
-                            pretty: "    " 
-                        }
-                    }
-                ]
-            },
             {
                 test: /\.scss$/,
                 use: [
@@ -51,16 +35,73 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg|otf)$/,
+                include: path.join(__dirname, "node_modules"),
+                exclude(path) {
+                    // You can perform more complicated checks  as well.
+                    return path.match(/src/);
+                },
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/',
+                        publicPath: "../fonts" // definimos la ruta que se pondra en el css de salida
+                    }
+                }]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/,
+                include: path.join(__dirname, "src"),
+                exclude(path) {
+                    // You can perform more complicated checks  as well.
+                    return path.match(/node_modules/);
+                },
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/',
+                        publicPath: "../images" // definimos la ruta que se pondra en el css de salida
+                    }
+                }]
+            },
+            {
+                test: /\.pug$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            publicPath: "./images"
+                        }
+                    },
+                    {
+                        loader: 'pug-html-loader', 
+                        options: { 
+                            pretty: "    " 
+                        }
+                    }
+                ]
             }
         ]
-    },
+    }
+    ,
     plugins: [
+        new BrowserSyncPlugin({
+            // browse to http://localhost:3000/ during development,
+            // ./public directory is being served
+            host: 'localhost',
+            port: 3000,
+            server: { baseDir: ['dist'] }
+        }),
+        new MiniCssExtractPlugin({
+            filename: "css/bootstrap.css"
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.pug'
-        }),
-        new MiniCssExtractPlugin({
-            filename: "css/style.css"
         })
     ]
 };
