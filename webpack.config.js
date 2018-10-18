@@ -1,7 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
 
@@ -11,9 +13,12 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'
     },
-
-    watch: true,
-
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        port: 3000,
+        open:true,
+        compress: true
+    },
     module: {
         rules: [
             {
@@ -89,21 +94,25 @@ const config = {
     }
     ,
     plugins: [
-        new BrowserSyncPlugin({
-            // browse to http://localhost:3000/ during development,
-            // ./public directory is being served
-            host: 'localhost',
-            port: 3000,
-            server: { baseDir: ['dist'] }
-        }),
+        new CleanWebpackPlugin(['dist']),
         new MiniCssExtractPlugin({
-            filename: "css/bootstrap.css"
+            filename: "css/style.css"
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.pug'
         })
-    ]
+    ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    }
 };
 
 module.exports = config;

@@ -21,8 +21,9 @@ Paquete inicial para desarrollo de sitios html con [Bootstrap](https://getbootst
 
 ## Correr aplicación
 
-* Modo desarrollo: `λ npm run dev`
-* Modo producción: `λ npm run prod`
+* Modo watch: `λ npm run serv` _archivos virtuales(en memoria)_
+* Modo desarrollo: `λ npm run dev` _archivos generados en dist sin minificar_
+* Modo producción: `λ npm run prod` _archivos generados en dist minificados_
 
 ***
 
