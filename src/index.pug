@@ -7,15 +7,44 @@ html(lang="en")
     
     //- Header
     header
-      h1.display-3.text-center.my-4 Configuraciones Bootpak
-
       include includes/navbar.pug
     
     //- Contenido principal
-    .container.d-flex.h-50
+    .container
       .row
         .col
-          h1 Hola mundo desde Bootstrap 4
+          .card.shadow-lg.p-3.mb-5.bg-white.rounded
+            .card-body.text-center
+              // Title
+              h2.card-title.h2 Configuraciones Bootpak
+              // Subtitle
+              h1.indigo-text.h6.mt-2.mb-3
+                strong UI KIT
+              hr
+              // Grid row
+              .row.d-flex.justify-content-center
+                // Grid column
+                .col-md-7
+                  p
+                    strong 100+
+                    |  Elementos, 
+                    strong 1400+
+                    |  Inconos (Fontawesome, Material Icons), 
+                    strong 74
+                    |  Animaciones CSS, Archivos .scss, Tutoriales y mas. 
+                    strong Libre para uso personal o comercial.
+                // Grid column
+                // Grid row
+                // CTA
+              a.btn.btn-primary.mr-2(href='#')
+                | Descargar
+                i.fa.fa-download.ml-1
+              a.btn.btn-success.mr-2(href='#')
+                | GitHub
+                i.fa.fa-github.ml-1
+              a.btn.btn-info.mr-2(target='_blank', href='#')
+                | Demo
+                i.fa.fa-image.ml-1
     
     //- Footer
-    include includes/footer.pug
+    //- include includes/footer.pug
