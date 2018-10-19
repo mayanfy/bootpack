@@ -20,3 +20,8 @@ $mdi-font-path: "~@mdi/font/fonts" !default;
 
 //- Menu hamburguesa
 @import '~hamburgers/_sass/hamburgers/hamburgers';
+
+.jumbotron-title {
+    background-image: url('../img/details.jpg');
+    background-position: 100% 0;
+ }

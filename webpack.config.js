@@ -101,6 +101,10 @@ const config = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: '1_1_basic_typography.html',
+            template: 'src/1_1_basic_typography.pug'
         })
     ],
     optimization: {
