@@ -105,6 +105,10 @@ const config = {
         new HtmlWebpackPlugin({
             filename: '1_1_basic_typography.html',
             template: 'src/1_1_basic_typography.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: '1_2_text_alignment_display.html',
+            template: 'src/1_2_text_alignment_display.pug'
         })
     ],
     optimization: {
