@@ -31,3 +31,11 @@ $mdi-font-path: "~@mdi/font/fonts" !default;
     background-size: cover;
     margin-bottom: 0px !important;
  }
+
+ .jumbotron-detail-page {
+    background-image: url('../img/background-detail.jpg');
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+    background-color: white;
+ }
