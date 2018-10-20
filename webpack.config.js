@@ -1,11 +1,12 @@
 
 const path = require('path');
 const merge = require('webpack-merge');
-const HtmlConfig = require('./htmlconfig');
+const UiConfig = require('./uiconfig');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
 
@@ -100,6 +101,7 @@ const config = {
         new MiniCssExtractPlugin({
             filename: "css/style.css"
         }),
+        new HtmlWebpackPlugin({ filename: 'index.html', template: 'src/index.pug'})
     ],
     optimization: {
         minimizer: [
@@ -113,4 +115,4 @@ const config = {
     }
 };
 
-module.exports = merge(config,HtmlConfig);
+module.exports = merge(config,UiConfig);

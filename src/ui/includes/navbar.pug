@@ -1,16 +1,16 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-light
   .container
-    a.navbar-brand(href='#') 
-      img.mr-2(src='./img/bootstrap-solid.svg', alt='', width='30', height='30')
+    a.navbar-brand(href='./index.html') 
+      img.mr-2(src='../img/bootstrap-solid.svg', alt='', width='30', height='30')
       | Bootpack
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.mr-auto
-        li.nav-item.active
-          a.nav-link(href='/')
-            | Inicio 
-            span.sr-only (current)
+        //- li.nav-item.active
+        //-   a.nav-link(href='/')
+        //-     | Template 
+        //-     span.sr-only (current)
         li.nav-item.dropdown
           a#navbarDropdownUtilities.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             | 1: Utilities
@@ -54,6 +54,8 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
             a.dropdown-item(href='4_4_popovers.html') 4.4 Popovers
             a.dropdown-item(href='4_5_modals.html') 4.5 Modals
             a.dropdown-item(href='4_6_scrollspy.html') 4.6 ScrollSpy
-      //- form.form-inline.my-2.my-lg-0
-      //-   input.form-control.mr-sm-2(placeholder='Buscar', aria-label='Buscar', type='search')
-      //-   button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Buscar
+      .my-2.my-lg-0
+        //- input.form-control.mr-sm-2(placeholder='Buscar', aria-label='Buscar', type='search')
+        a.btn.btn-primary.shadow(href='/' ) 
+          i.mdi.mdi-arrow-left.mr-1
+          | Return template

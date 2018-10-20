@@ -1,27 +1,37 @@
 //- Font a usar
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-//- Bloque de las configuraciones nuevas
+//- Custom params for bootstrap
 $font-family-sans-serif: 'Roboto', sans-serif !default;
+$body-color:       #09021E;
   
-//- Framework de boostrap
+//- Get framework boostrap
 @import "~bootstrap/scss/bootstrap";
 
-//- Iconos de Font awesome v4.7
+//- Icons Font awesome v4.7
 $fa-font-path: '~font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 
-//- Iconos de Material icons
+//- Icons Material icons
 $mdi-font-path: "~@mdi/font/fonts" !default;
 @import '~@mdi/font/scss/materialdesignicons';
 
-//- Efectos transicion
+//- Transition efects
 @import '~aos/src/sass/aos';
 
-//- Menu hamburguesa
+//- Hamburguer menu
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 
+// Custom class for template
 .jumbotron-title {
     background-image: url('../img/details.jpg');
     background-position: 100% 0;
+ }
+
+.jumbotron-main-page {
+    height: 100vh;
+    background-image: url('../img/background.jpg');
+    background-position: 100% 0;
+    background-size: cover;
+    margin-bottom: 0px !important;
  }

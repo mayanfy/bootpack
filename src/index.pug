@@ -1,53 +1,20 @@
 doctype html
 html(lang="en")
   
-  include includes/header.pug
+  //- include includes/header.pug
 
   body
-    
-    //- Header
-    header
-      include includes/navbar.pug
-
-    .top-image.mb-4.h-25
-      img.img-fluid(src='./img/descktop.jpg', alt='Card image cap')
-    
-    //- Contenido principal
-    .container
-      .row
-        .col
-          .card.shadow-lg.p-3.mb-5.bg-white.rounded
-            .card-body.text-center
-              // Title
-              h2.card-title.h2 Configuraciones Bootpak
-              // Subtitle
-              h1.indigo-text.h6.mt-2.mb-3
-                strong UI KIT
-              hr
-              // Grid row
-              .row.d-flex.justify-content-center
-                // Grid column
-                .col-md-7
-                  p
-                    strong 100+
-                    |  Elementos, 
-                    strong 1400+
-                    |  Inconos (Fontawesome, Material Icons), 
-                    strong 74
-                    |  Animaciones CSS, Archivos .scss, Tutoriales y mas. 
-                    strong Libre para uso personal o comercial.
-                // Grid column
-                // Grid row
-                // CTA
-              a.btn.btn-primary.mr-2(href='#')
-                | Descargar
-                i.fa.fa-download.ml-1
-              a.btn.btn-success.mr-2(href='#')
-                | GitHub
-                i.fa.fa-github.ml-1
-              a.btn.btn-info.mr-2(target='_blank', href='#')
-                | Demo
-                i.fa.fa-image.ml-1
-    
-    //- Footer
-    //- include includes/footer.pug
+    .jumbotron.jumbotron-fluid.jumbotron-main-page
+      .container.d-flex.h-100
+        .row.justify-content-start.align-self-center.w-100
+          .col-lg-5.col-sm-12
+            h3.display-3.h3-responsive.font-weight-bold Happy Codding
+            p Replace this home page and put your design for your new website.
+            br
+            a.btn.btn-primary.mr-3.mb-2(href='./ui/index.html' role='button') 
+              i.mdi.mdi-brush.mr-2
+              | UI Bootpack
+            a.btn.btn-light.mb-2(href='https://github.com/mayanfy/bootpack' role='button')
+              i.mdi.mdi-github-circle.mr-2
+              | Github
+            
