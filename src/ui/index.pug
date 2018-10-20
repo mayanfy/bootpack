@@ -4,50 +4,36 @@ html(lang="en")
   include includes/header.pug
 
   body
-    
-    //- Header
-    header
+    .jumbotron.jumbotron-fluid.jumbotron-main-page
+      
       include includes/navbar.pug
 
-    .top-image.mb-4.h-25
-      img.img-fluid(src='../img/descktop.jpg', alt='Card image cap')
-    
-    //- Contenido principal
-    .container
-      .row
-        .col
-          .card.shadow-lg.p-3.mb-5.bg-white.rounded
-            .card-body.text-center
-              // Title
-              h2.card-title.h2 Accelerate you codding
-              // Subtitle
-              h1.text-primary.h6.mt-2.mb-3
-                strong UI KIT
-              hr
-              // Grid row
-              .row.d-flex.justify-content-center
-                // Grid column
-                .col-md-7
-                  p
-                    strong 100+
-                    |  Elementos, 
-                    strong 1400+
-                    |  Inconos (Fontawesome, Material Icons), 
-                    strong 74
-                    |  Animaciones CSS, Archivos .scss, Tutoriales y mas. 
-                    strong Libre para uso personal o comercial.
-                // Grid column
-                // Grid row
-                // CTA
-              a.btn.btn-primary.mr-2(href='#')
-                | Descargar
-                i.fa.fa-download.ml-1
-              a.btn.btn-success.mr-2(href='#')
-                | GitHub
-                i.fa.fa-github.ml-1
-              a.btn.btn-info.mr-2(target='_blank', href='#')
-                | Demo
-                i.fa.fa-image.ml-1
-    
-    //- Footer
-    //- include includes/footer.pug
+      .container
+        .row
+          .col
+            h4.display-4.h4-responsive.font-weight-bold Accelerate you codding
+            p.text-primary UI KIT
+            
+            br
+            
+            p
+              strong 100+
+              |  Elementos, 
+              strong 1400+
+              |  Inconos (Fontawesome, Material Icons),
+            
+            p 
+              strong 74
+              |  Animaciones CSS, Archivos .scss, Tutoriales y mas. 
+              strong Libre para uso personal o comercial.
+            
+            a.btn.btn-primary.mr-2(href='#')
+              | Descargar
+              i.fa.fa-download.ml-1
+            a.btn.btn-info.mr-2(href='#')
+              | GitHub
+              i.fa.fa-github.ml-1
+            a.btn.btn-light.mr-2(target='_blank', href='#')
+              | Demo
+              i.fa.fa-image.ml-1
+  

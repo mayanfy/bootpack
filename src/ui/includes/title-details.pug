@@ -1,5 +1,16 @@
-.jumbotron.jumbotron-fluid.jumbotron-title
+
+.jumbotron.jumbotron-fluid.jumbotron-main-page.h-auto.pb-4.pt-4.shadow-lg
+  
+  include navbar.pug
+
   .container
-    h1.display-4.text-white= title
-    p.lead.text-white
-      = subtitle
+    .row
+      .col
+        h2.h2-responsive.font-weight-bold= title
+        p.text-uppercase
+          = subtitle
+
+        i.mdi.mdi-chevron-double-down.text-primary.font-weight-bold.h6
+
+br
+br
