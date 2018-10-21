@@ -88,4 +88,3 @@ $('#hello').on('hide.bs.tooltip', function () {
 $('#hello').on('hidden.bs.tooltip', function () {
 	console.log('Tooltip Hidden');
 });
-
